@@ -4,8 +4,8 @@ param(
 )
 
 echo @"
-`$pfx=$pfx
-`$exe=$exe
+`$pfx="$pfx"
+`$exe="$exe"
 
 # copy arguments
 `$_args = `$args
