@@ -12,10 +12,29 @@ echo @"
 
 
 if (`$_args.Length -gt 0) { 
-    `$_args[0] = `$pfx + `$_args[0] # add prefix to script argument
+    if (`$_args[0] == "list") {
+        echo "Contents of `$pfx:"
+        (Get-ChildItem `$pfx -Filter "*.bms").name
+        exit 0
+    }
+    `$a = `$_args[0];
+    `$b = `$pfx + `$a
+
+    `$ae = `$(Test-Path `$a)
+    `$be = `$(Test-Path `$b)
     
     # test script exists
-    if (! `$(Test-Path `$_args[0])) { echo "script `$(`$_args[0]) not found"; exit -1; }
+    if (! `$be) {
+        if (! `$ae) {
+            echo "script `$a not found here or in `$pfx"; 
+            echo "to list all scripts, run: quickbms.ps1 list"
+            exit -1;
+        } else {
+            `$_args[0] = `$a;
+        }
+    } else {
+        `$_args[0] = `$b;
+    }
 } 
 
 # forward all arguments
