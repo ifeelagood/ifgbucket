@@ -11,14 +11,18 @@
         }
     },
     "pre_install": [
+        "$sp=(Get-Location).path",
         "cd $dir",
+        "Get-ChildItem ./xentax_cs -File | ForEach-Object { $tgt=\"./$($_.Name)\"; if (Test-Path $tgt) { $tgt=\"./$($_.BaseName)_xentax$($_.Extension)\"}; Move-Item $_.FullName -Destination $tgt }",
+        "Remove-Item xentax-cs",
         "New-Item -ItemType Directory bin",
         "$exe64=\"$(appdir quickbms)\\current\\bin\\quickbms.exe\"",
         "$exe32=\"$(appdir quickbms)\\current\\bin\\quickbms32.exe\"",
         "$pfx=\"$dir\\\"",
         "$script=\"$bucketsdir\\ifgbucket\\scripts\\quickbms-proxy.ps1\"",
         "Invoke-Expression \"$script $pfx $exe64\" | Out-File bin/quickbms.ps1",
-        "Invoke-Expression \"$script $pfx $exe32\" | Out-File bin/quickbms32.ps1"
+        "Invoke-Expression \"$script $pfx $exe32\" | Out-File bin/quickbms32.ps1",
+        "cd $sp"
     ],
     "bin": ["bin/quickbms.ps1", "bin/quickbms32.ps1"]
 }
