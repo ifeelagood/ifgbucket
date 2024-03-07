@@ -11,11 +11,10 @@
         }
     },
     "pre_install": [
-        "function Out-Default {}",
         "cd $dir",
         "Move-Item 'quickbms_4gb_files.exe' -Destination 'quickbms32.exe'",
         "$tbl = @{bin='*.exe';scripts='*.bat';doc='*.txt'}",
-        "$tbl.GetEnumerator() | ForEach-Object { New-Item -ItemType 'Directory' -Name $_.key; Move-Item $_.value -Destination $_.key }"
+        "$tbl.GetEnumerator() | ForEach-Object { New-Item -ItemType 'Directory' -Name $_.key; Move-Item $_.value -Destination $_.key } | Out-Null"
     ],
     "bin": ["bin/quickbms.exe", "bin/quickbms32.exe"]
 }
