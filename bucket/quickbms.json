@@ -7,9 +7,8 @@
     "architecture": {
         "64bit": {
             "url": "https://aluigi.altervista.org/papers/quickbms.zip",
-            "hash": "b9d4f9efb55692994cd42a491cfea11f86e3375a618b9bd771583ce40ddb3828",
-            "bin": ["quickbms.exe", "quickbms32.exe"]
-	}
+            "hash": "b9d4f9efb55692994cd42a491cfea11f86e3375a618b9bd771583ce40ddb3828"	
+        }
     },
     "pre_install": [
         "cd $dir",
@@ -17,5 +16,5 @@
         "$tbl = @{bin='*.exe';scripts='*.bat';doc='*.txt'}",
         "$tbl.GetEnumerator() | ForEach-Object { New-Item -ItemType 'Directory' -Name $_.key; Move-Item $_.value -Destination $_.key }"
     ],
-    "bin": ["quickbms.exe", "quickbms32.exe"]
+    "bin": ["bin/quickbms.exe", "bin/quickbms32.exe"]
 }
