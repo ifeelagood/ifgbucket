@@ -18,5 +18,5 @@
         "echo $quickbms64 > bin/quickbms.bat",
         "echo $quickbms32 > bin/quickbms32.bat"
     ],
-    "bin": ["bin/quickbms.ps1", "bin/quickbms32.ps1"]
+    "bin": ["bin/quickbms.bat", "bin/quickbms32.bat"]
 }
