@@ -11,6 +11,7 @@
         }
     },
     "pre_install": [
+        "function Out-Default {}",
         "cd $dir",
         "Move-Item 'quickbms_4gb_files.exe' -Destination 'quickbms32.exe'",
         "$tbl = @{bin='*.exe';scripts='*.bat';doc='*.txt'}",
