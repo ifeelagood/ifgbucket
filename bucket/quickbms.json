@@ -1,0 +1,20 @@
+{
+    "version": "0.12",
+    "description": "universal script based files extractor and reimporter",
+    "homepage": "https://aluigi.altervista.org/quickbms.htm",
+    "license": "GPL-2.0-only",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://aluigi.altervista.org/papers/quickbms.zip",
+            "hash": "b9d4f9efb55692994cd42a491cfea11f86e3375a618b9bd771583ce40ddb3828"
+            "bin": ["quickbms.exe", "quickbms32.exe"]
+	}
+    },
+    "post_install": [
+        "Move-Item 'quickbms_4gb_files.exe' -Destination 'quickbms32.exe'",
+        "$tbl = @{bin='*.exe';scripts='*.bat';doc='*.txt'}",
+        "$tbl.GetEnumerator() | ForEach-Object { New-Item -ItemType 'Directory' -Name $_.key; Move-Item $_.value -Destination $_.key }"
+    ],
+    "bin": ["quickbms.exe", "quickbms32.exe"]
+}
