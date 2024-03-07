@@ -12,7 +12,7 @@ echo @"
 
 
 if (`$_args.Length -gt 0) { 
-    if (`$_args[0] == "list") {
+    if (`$_args[0] -eq "list") {
         echo "Contents of `$pfx"
         (Get-ChildItem `$pfx -Filter "*.bms").name
         exit 0
