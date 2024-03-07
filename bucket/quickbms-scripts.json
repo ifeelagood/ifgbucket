@@ -18,8 +18,7 @@
         "$pfx=$dir\\",
         "$script=$bucketsdir\\scripts\\quickbms-proxy.ps1",
         "Invoke-Expression $script $pfx $exe64 | Out-File bin/quickbms.ps1",
-        "Invoke-Expression $script $pfx $exe32 | Out-File bin/quickbms32.ps1",
-
+        "Invoke-Expression $script $pfx $exe32 | Out-File bin/quickbms32.ps1"
     ],
     "bin": ["bin/quickbms.ps1", "bin/quickbms32.ps1"]
 }
