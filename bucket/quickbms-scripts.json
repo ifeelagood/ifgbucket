@@ -13,8 +13,8 @@
     "pre_install": [
         "cd $dir",
         "New-Item -ItemType Directory bin",
-        "$quickbms64 = @echo off & setlocal enabledelayedexpansion & set prefix=$dir & set \"args=%prefix%%1\" & shift & :loop & if \"%~1\"==\"\" goto end & set \"args=!args! %1\" & shift & goto loop & :end & \"$(appdir quickbms)\\bin\\quickbms.exe\" !args!",
-        "$quickbms32 = @echo off & setlocal enabledelayedexpansion & set prefix=$dir & set \"args=%prefix%%1\" & shift & :loop & if \"%~1\"==\"\" goto end & set \"args=!args! %1\" & shift & goto loop & :end & \"$(appdir quickbms)\\bin\\quickbms32.exe\" !args!",
+        "$quickbms64 = \"@echo off & setlocal enabledelayedexpansion & set prefix=$dir & set \"args=%prefix%%1\" & shift & :loop & if \"%~1\"==\"\" goto end & set \"args=!args! %1\" & shift & goto loop & :end & \"$(appdir quickbms)\\bin\\quickbms.exe\" !args!\"",
+        "$quickbms32 = \"@echo off & setlocal enabledelayedexpansion & set prefix=$dir & set \"args=%prefix%%1\" & shift & :loop & if \"%~1\"==\"\" goto end & set \"args=!args! %1\" & shift & goto loop & :end & \"$(appdir quickbms)\\bin\\quickbms32.exe\" !args!\"",
         "echo $quickbms64 > bin/quickbms.ps1",
         "echo $quickbms32 > bin/quickbms32.ps1"
     ],
