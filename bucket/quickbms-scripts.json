@@ -13,8 +13,8 @@
     "pre_install": [
         "cd $dir",
         "New-Item -ItemType Directory bin",
-        "$exe64=\"$(appdir quickbms)\\bin\\quickbms.exe\"",
-        "$exe32=\"$(appdir quickbms)\\bin\\quickbms32.exe\"",
+        "$exe64=\"$(appdir quickbms)\\current\\bin\\quickbms.exe\"",
+        "$exe32=\"$(appdir quickbms)\\current\\bin\\quickbms32.exe\"",
         "$pfx=\"$dir\\\"",
         "$script=\"$bucketsdir\\ifgbucket\\scripts\\quickbms-proxy.ps1\"",
         "Invoke-Expression \"$script $pfx $exe64\" | Out-File bin/quickbms.ps1",
