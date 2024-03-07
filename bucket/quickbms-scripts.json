@@ -3,7 +3,7 @@
     "description": "scripts for quickbms: universal script based files extractor and reimporter",
     "homepage": "https://aluigi.altervsita.org/quickbms.htm",
     "license": "GPL-2.0-only",
-    "notes": "note the subdirectory xentax_cx",
+    "notes": "Install proxy scripts quickbms.ps1 quickbms32.ps1 for path injection",
     "architecture": {
         "64bit": {
             "url": "https://aluigi.altervista.org/bms/quickbms_scripts.zip",
@@ -14,7 +14,7 @@
         "$sp=(Get-Location).path",
         "cd $dir",
         "Get-ChildItem ./xentax_cs -File | ForEach-Object { $tgt=\"./$($_.Name)\"; if (Test-Path $tgt) { $tgt=\"./$($_.BaseName)_xentax$($_.Extension)\"}; Move-Item $_.FullName -Destination $tgt }",
-        "Remove-Item xentax-cs",
+        "Remove-Item xentax_cs",
         "New-Item -ItemType Directory bin",
         "$exe64=\"$(appdir quickbms)\\current\\bin\\quickbms.exe\"",
         "$exe32=\"$(appdir quickbms)\\current\\bin\\quickbms32.exe\"",
