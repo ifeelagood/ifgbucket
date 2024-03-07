@@ -1,0 +1,13 @@
+{
+    "version": "07.03.24",
+    "description": "scripts for quickbms: universal script based files extractor and reimporter",
+    "homepage": "https://aluigi.altervsita.org/quickbms.htm",
+    "license": "GPL-2.0-only",
+    "notes": "note the subdirectory xentax_cx",
+    "architecture": {
+        "64bit": {
+            "url": "https://aluigi.altervista.org/bms/quickbms_scripts.zip",
+            "hash": "1dc4bb68dc330aa8623f673c5b0e326cb330696ff2b90f4719590c1bb5b304bd"	
+        }
+    }
+}
