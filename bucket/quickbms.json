@@ -11,7 +11,8 @@
             "bin": ["quickbms.exe", "quickbms32.exe"]
 	}
     },
-    "post_install": [
+    "pre_install": [
+        "cd $dir",
         "Move-Item 'quickbms_4gb_files.exe' -Destination 'quickbms32.exe'",
         "$tbl = @{bin='*.exe';scripts='*.bat';doc='*.txt'}",
         "$tbl.GetEnumerator() | ForEach-Object { New-Item -ItemType 'Directory' -Name $_.key; Move-Item $_.value -Destination $_.key }"
