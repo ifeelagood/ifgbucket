@@ -25,3 +25,4 @@ scoop install ifgbucket/<manifestname>
 ## How do I contribute to new/existing manifests?
 
 Make a damn pull request, or open an issue if too lazy.
+
