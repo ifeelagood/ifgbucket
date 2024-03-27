@@ -5,7 +5,7 @@
     "license": "Proprietary",
     "notes": "Activate by running burpsuite-loader.ps1 and following the instructions.",
     "url": [
-        "https://portswigger.net/burp/releases/download?product=pro&version=2023.11.1.1&type=Jar",
+        "https://portswigger.net/burp/releases/download?product=pro&version=2023.11.1.1&type=Jar#/burpsuite_pro_v2023.11.1.1.jar",
         "https://github.com/M41KL-N41TT/BurpSuite/raw/main/loader.jar"
     ],
     "hash": [
