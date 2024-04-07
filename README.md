@@ -12,7 +12,10 @@ Personal bucket for [Scoop](https://scoop.sh), the Windows command-line package 
 |----|-----------|
 |[quickbms](bucket/quickbms.json)|universal script based files extractor and reimporter|
 |[quickbms-scripts](bucket/quickbms-scripts.json)|scripts for quickbms: universal script based files extractor and reimporter|
-
+|[burp-suite-pro](bucker/burp-suite-pro.json)|Burp Suite Professional with loader|
+|[ealayer3](bucket/ealayer3.json)|EALayer3 is a codec derived from MPEG-1 audio, used in EA games|
+|[mpfmaster](bucket/mpfmaster.json)|Used to decompile and compile the Pathfinder files used for interactive music in EA Games|
+|[chernobyl](bucket/chernobyl.json)|Chernobyl Simulator is a port of the simulation game 'Chernobyl: The Legacy Continues' to modern 64-bit windows|
 
 ## How do I install these manifests?
 
