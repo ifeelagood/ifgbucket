@@ -26,5 +26,6 @@
         "script": [
             "Start-Process -Wait \"$dir\\uninstall.exe\" -ArgumentList('/S')"
         ]
-    }
+    },
+    "persist": "FILES\\SAVED"
 }
